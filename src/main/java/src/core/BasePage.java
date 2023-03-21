@@ -30,4 +30,16 @@ public class BasePage {
         waitForElementToBeClickable(locator, timeout);
         driver.findElement(locator).sendKeys(text);
     }
+
+
+
+
+    public String getTitle(){
+        return driver.getTitle();
+    }
+
+    public void goTo (String UrI){
+        driver.get(UrI);
+
+    }
 }
