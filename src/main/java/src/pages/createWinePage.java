@@ -2,6 +2,7 @@ package src.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import src.core.BasePage;
 
 import java.time.Duration;
@@ -16,8 +17,8 @@ public class createWinePage extends BasePage {
 
     protected By uploadButton = By.xpath("//div[@class='btn-submit']//button[@class='MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary']");
 
-    public createWinePage(WebDriver driver) {
-        super(driver);
+    public createWinePage(WebDriver driver, WebDriverWait wait) {
+        super(driver, wait);
     }
 
     public void sendVarietyName(String varietyName) {
