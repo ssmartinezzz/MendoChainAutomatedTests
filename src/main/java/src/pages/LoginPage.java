@@ -2,6 +2,7 @@ package src.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import src.core.BasePage;
 
 import java.time.Duration;
@@ -13,8 +14,8 @@ public class LoginPage extends BasePage {
 
     protected By signInFirstButton = By.xpath("//div[@class='home__info-container']//a//span[@class='MuiButton-label']");
     protected By signInButton = By.xpath("//button[@class='MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary']");
-    public LoginPage(WebDriver driver) {
-        super(driver);
+    public LoginPage(WebDriver driver, WebDriverWait wait) {
+        super(driver, wait);
     }
 
     public void clickSignInButton() {
@@ -39,7 +40,7 @@ public class LoginPage extends BasePage {
         sendUsername(username);
         sendPassword(password);
         clickSignInButton();
-        return new LoggedUserPage(driver);
+        return new LoggedUserPage(driver, wait);
     }
 
 

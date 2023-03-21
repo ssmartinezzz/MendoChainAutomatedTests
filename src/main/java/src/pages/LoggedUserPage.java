@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import src.core.BasePage;
 
 import java.time.Duration;
@@ -15,8 +16,8 @@ public class LoggedUserPage extends BasePage {
     protected By uploadAWine = By.linkText("Upload a wine");
 
 
-    public LoggedUserPage(WebDriver driver) {
-        super(driver);
+    public LoggedUserPage(WebDriver driver, WebDriverWait wait) {
+        super(driver, wait);
     }
 
     public void clickLogoutButton() {
@@ -45,12 +46,12 @@ public class LoggedUserPage extends BasePage {
     public createWinePage createWine() {
         openOptions();
         clickUploadWine();
-        return new createWinePage(driver);
+        return new createWinePage(driver, wait);
     }
 
 
     public LoginPage logOut() {
         clickLogoutButton();
-        return new LoginPage(driver);
+        return new LoginPage(driver, wait);
     }
 }

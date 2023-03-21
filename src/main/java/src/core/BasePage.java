@@ -11,9 +11,9 @@ public class BasePage {
     protected WebDriver driver;
     protected WebDriverWait wait;
 
-    public  BasePage (WebDriver driver) {
+    public  BasePage (WebDriver driver, WebDriverWait wait) {
         this.driver = driver;
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        this.wait = wait;
     }
 
     protected void waitForElementToBeClickable(By locator, Duration timeout) {
@@ -29,5 +29,17 @@ public class BasePage {
     protected void sendKeys(By locator, String text, Duration timeout) {
         waitForElementToBeClickable(locator, timeout);
         driver.findElement(locator).sendKeys(text);
+    }
+
+
+
+
+    public String getTitle(){
+        return driver.getTitle();
+    }
+
+    public void goTo (String UrI){
+        driver.get(UrI);
+
     }
 }
