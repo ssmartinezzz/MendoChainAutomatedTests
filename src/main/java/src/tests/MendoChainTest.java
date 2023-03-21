@@ -14,7 +14,7 @@ public class MendoChainTest extends BaseTest {
     public void loginUserToMendoChain() {
         page.goTo("http://localhost:3000/");
         LoginPage loginPage = new LoginPage(driver, wait);
-        LoggedUserPage  loggedUserPage = loginPage.loginUser("localtest","1597534682sS");
+        LoggedUserPage  loggedUserPage = loginPage.loginUser("localtest","12345678");
     }
 
 
