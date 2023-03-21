@@ -12,7 +12,7 @@ import java.time.Duration;
 public class LoggedUserPage extends BasePage {
     protected By logoutButton = By.xpath("//div[@class='nav-item']//button[@class='MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary']//span[@class='MuiButton-label']");
     protected By burgerMenu = By.xpath("//button[@class='navbar-toggler collapsed']");
-    protected By optionsMenu = By.xpath("//button[@class='navbar-toggler']");
+    protected By optionsMenu = By.id("basic-nav-dropdown");
     protected By uploadAWine = By.linkText("Upload a wine");
 
 
@@ -32,21 +32,19 @@ public class LoggedUserPage extends BasePage {
     }
 
     public void clickUploadWine() {
-        super.click(uploadAWine, Duration.ofSeconds(5));
+        super.waitForElementToBeClickable(uploadAWine, Duration.ofSeconds(10));
+        super.click(uploadAWine, Duration.ofSeconds(10));
     }
 
     public void openOptions() {
-        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(burgerMenu));
-        if (element.isDisplayed()) {
-            clickBurgerMenu();
-        }
+        super.waitForElementToBeClickable(optionsMenu,Duration.ofSeconds(10));
         clickOptionsMenu();
     }
 
-    public createWinePage createWine() {
+    public CreateWinePage createWine() {
         openOptions();
         clickUploadWine();
-        return new createWinePage(driver, wait);
+        return new CreateWinePage(driver, wait);
     }
 
 

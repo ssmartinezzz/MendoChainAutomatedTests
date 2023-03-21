@@ -1,0 +1,43 @@
+[
+    {
+      "variety": "Cabernet Sauvignon",
+      "content": "750 ml",
+      "alcohol": "14%",
+      "brand": "Bodegas Norton",
+      "lote": "M123",
+      "year": "2019"
+    },
+    {
+      "variety": "Malbec",
+      "content": "750 ml",
+      "alcohol": "13%",
+      "brand": "Trapiche",
+      "lote": "T542",
+      "year": "2020"
+    },
+    {
+      "variety": "Chardonnay",
+      "content": "750 ml",
+      "alcohol": "13%",
+      "brand": "Bodegas Salentein",
+      "lote": "S789",
+      "year": "2018"
+    },
+    {
+      "variety": "Syrah",
+      "content": "750 ml",
+      "alcohol": "15%",
+      "brand": "Bodega Colomé",
+      "lote": "C654",
+      "year": "2021"
+    },
+    {
+      "variety": "Pinot Noir",
+      "content": "750 ml",
+      "alcohol": "13.5%",
+      "brand": "Bodegas Chandon",
+      "lote": "CH789",
+      "year": "2019"
+    }
+  ]
+

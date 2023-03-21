@@ -7,7 +7,7 @@ import src.core.BasePage;
 
 import java.time.Duration;
 
-public class createWinePage extends BasePage {
+public class CreateWinePage extends BasePage {
     protected By varietyField = By.id("variety_name");
     protected By contentField = By.id("content");
     protected  By alcoholField = By.id("alcohol");
@@ -17,7 +17,7 @@ public class createWinePage extends BasePage {
 
     protected By uploadButton = By.xpath("//div[@class='btn-submit']//button[@class='MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary']");
 
-    public createWinePage(WebDriver driver, WebDriverWait wait) {
+    public CreateWinePage(WebDriver driver, WebDriverWait wait) {
         super(driver, wait);
     }
 
