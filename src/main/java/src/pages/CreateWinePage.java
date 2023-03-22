@@ -11,7 +11,7 @@ public class CreateWinePage extends BasePage {
     protected By varietyField = By.id("variety_name");
     protected By contentField = By.id("content");
     protected  By alcoholField = By.id("alcohol");
-    protected By brandField = By.id("brand_name-label");
+    protected By brandField = By.id("brand_name");
     protected By lotField = By.id("lote");
     protected By yearField = By.id("year");
 

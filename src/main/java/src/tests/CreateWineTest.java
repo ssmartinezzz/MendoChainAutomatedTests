@@ -44,12 +44,17 @@ public class CreateWineTest extends BaseTest {
         LoginPage loginPage = new LoginPage(driver, wait);
         LoggedUserPage  loggedUserPage = loginPage.loginUser("localtest","1597534682sS");
         try {
-            Thread.sleep(6000);
+            Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
         CreateWinePage createWine = loggedUserPage.createWine();
         createWine.uploadAWine(variety,content,alcohol,brand,lote,year);
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }
 
