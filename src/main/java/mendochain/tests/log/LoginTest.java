@@ -1,9 +1,9 @@
-package src.tests;
+package mendochain.tests.log;
 
 import org.testng.annotations.Test;
-import src.core.BaseTest;
-import src.pages.LoggedUserPage;
-import src.pages.LoginPage;
+import mendochain.core.BaseTest;
+import mendochain.pages.LoggedUserPage;
+import mendochain.pages.LoginPage;
 
 public class LoginTest extends BaseTest {
 
@@ -26,6 +26,26 @@ public class LoginTest extends BaseTest {
         page.goTo("http://localhost:3000/");
         LoginPage loginPage = new LoginPage(driver, wait);
         LoggedUserPage  loggedUserPage = loginPage.loginUser("localtest","1597534682sS");
+    }
+
+    @Test
+    public void logInAndLogOut() {
+        page.goTo("http://localhost:3000/");
+        LoginPage loginPage = new LoginPage(driver, wait);
+        LoggedUserPage  loggedUserPage = loginPage.loginUser("localtest","1597534682sS");
+        try {
+            Thread.sleep(6000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        LoginPage loginPage2 = loggedUserPage.logOut();
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+
     }
 
 

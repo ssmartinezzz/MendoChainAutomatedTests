@@ -1,4 +1,4 @@
-package src.core;
+package mendochain.core;
 
 public class WineData {
     public String variety;

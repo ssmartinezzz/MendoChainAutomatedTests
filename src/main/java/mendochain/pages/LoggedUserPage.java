@@ -1,11 +1,9 @@
-package src.pages;
+package mendochain.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import src.core.BasePage;
+import mendochain.core.BasePage;
 
 import java.time.Duration;
 
